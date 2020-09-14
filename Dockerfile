@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM cyberbotics/webots:R2020b-rev1-ubuntu20.04
+FROM cyberbotics/webots:latest
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
