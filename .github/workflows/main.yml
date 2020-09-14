@@ -8,7 +8,7 @@ jobs:
     steps:
     - name: Webots Action Test
       id: hello
-      uses: DavidMansolino/webots-action-test@0.0.1
+      uses: DavidMansolino/webots-action-test@R2020b-rev1
       with:
         who-to-greet: 'Mona the Octocat'
     # Use the output from the `hello` step
