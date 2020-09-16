@@ -16,4 +16,4 @@ jobs:
         who-to-greet: 'Mona the Octocat'
     # Use the output from the `hello` step
     - name: Get the output Webots version
-      run: echo "The version was ${{ steps.hello.webots_step.time }}"
+      run: echo "The version was ${{ steps.webots_step.outputs.time }}"
