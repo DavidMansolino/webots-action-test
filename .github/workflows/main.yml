@@ -6,15 +6,14 @@ on:
     - cron: "0/20 * * * *"
 
 jobs:
-  hello_world_job:
+  test:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job to print Webots version
     steps:
-    - name: Webots Action Test
-      id: hello
+    - id: webots_step
       uses: DavidMansolino/webots-action-test@R2020b-rev1
       with:
         who-to-greet: 'Mona the Octocat'
     # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+    - name: Get the output Webots version
+      run: echo "The version was ${{ steps.hello.webots_step.time }}"
