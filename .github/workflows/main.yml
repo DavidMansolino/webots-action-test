@@ -19,3 +19,5 @@ jobs:
     # Use the output from the `hello` step
     - name: Get the output Webots version
       run: echo "The version was ${{ steps.webots_step.outputs.time }}"
+    - name: test
+      run: webots --version
