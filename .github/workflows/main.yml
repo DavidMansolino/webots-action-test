@@ -13,7 +13,7 @@ jobs:
     name: A job to print Webots version
     steps:
     - id: webots_step
-      uses: DavidMansolino/webots-action-test@R2020b-rev1
+      uses: DavidMansolino/webots-action-test@master
       with:
         who-to-greet: 'Mona the Octocat'
     # Use the output from the `hello` step
