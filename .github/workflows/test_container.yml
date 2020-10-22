@@ -17,6 +17,6 @@ jobs:
       run: |
         - export VERSION=$(xvfb-run webots --version --batch)
         - echo $VERSION
-        - echo "::set-output name=version::\"$VERSION\""
+        # - echo "::set-output name=version::\"$VERSION\""
     - name: Get Sysinfo
       run: xvfb-run webots --sysinfo --batch
