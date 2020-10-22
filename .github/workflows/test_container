@@ -1,0 +1,15 @@
+name: Action Test
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: cyberbotics/webots:latest
+    steps:
+    - name: Get Webots Version
+      run: xvfb-run webots --version
