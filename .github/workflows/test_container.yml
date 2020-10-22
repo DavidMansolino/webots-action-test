@@ -13,3 +13,5 @@ jobs:
     steps:
     - name: Get Webots Version
       run: xvfb-run webots --version --batch
+    - name: Get Sysinfo
+      run: xvfb-run webots --sysinfo --batch
