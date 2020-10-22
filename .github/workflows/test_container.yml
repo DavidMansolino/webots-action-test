@@ -12,4 +12,4 @@ jobs:
       image: cyberbotics/webots:latest
     steps:
     - name: Get Webots Version
-      run: xvfb-run webots --version
+      run: xvfb-run webots --version --batch
