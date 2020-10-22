@@ -8,10 +8,14 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.step1.outputs.version }}
     container:
       image: cyberbotics/webots:latest
     steps:
     - name: Get Webots Version
-      run: xvfb-run webots --version --batch
+      run: |
+        - VERSION=$(xvfb-run webots --version --batch)
+        - echo "::set-output name=version::$VERSION"
     - name: Get Sysinfo
       run: xvfb-run webots --sysinfo --batch
