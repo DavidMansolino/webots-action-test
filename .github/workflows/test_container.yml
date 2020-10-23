@@ -15,9 +15,9 @@ jobs:
     steps:
     - name: Get Webots Version
       run: |
-        - xvfb-run webots --version --batch
-        - export VERSION="R2020b revision 1"
-        - echo $VERSION
-        - echo "::set-output name=version::$VERSION"
+        xvfb-run webots --version --batch
+        export VERSION="R2020b revision 1"
+        echo $VERSION
+        echo "::set-output name=version::$VERSION"
     - name: Get Sysinfo
       run: xvfb-run webots --sysinfo --batch
