@@ -13,11 +13,8 @@ jobs:
     container:
       image: cyberbotics/webots:latest
     steps:
-    - name: Get Webots Version
+    - name: Print Webots Version
       run: |
         xvfb-run webots --version --batch
-        export VERSION="R2020b revision 1"
-        echo $VERSION
-        echo "::set-output name=version::$VERSION"
-    - name: Get Sysinfo
+    - name: Print System Information
       run: xvfb-run webots --sysinfo --batch
